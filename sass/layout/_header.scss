@@ -1,0 +1,123 @@
+@use '../helpers/variables';
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  .top-nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo img {
+      width: 150px;
+    }
+    .search {
+      width: 500px;
+      border: 2px solid variables.$main-color;
+      position: relative;
+      input {
+        padding: 18px 175px 18px 20px;
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+      button {
+        position: absolute;
+        background-color: variables.$main-color;
+        outline: none;
+        border: none;
+        height: 100%;
+        width: 175px;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        font-size: 18px;
+        color: variables.$dark-color;
+      }
+    }
+    .cart-head {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      i {
+        color: variables.$dark-color;
+        font-size: 20px;
+        border: 1px solid variables.$border-color;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: variables.$main-color;
+          color: #fff;
+        }
+      }
+      .icon-cart {
+        position: relative;
+        .count-item {
+          position: absolute;
+          top: -5px;
+          right: 0;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 20px;
+          color: variables.$dark-color;
+          border: 1px solid variables.$border-color;
+          background-color: variables.$main-color
+        }
+      }
+      .tottal-price p {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  nav {
+    border-top: 1px solid variables.$border-color;
+    .links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul {
+        display: flex;
+        gap: 70px;
+        li {
+          position: relative;
+          padding: 20px 0;
+          a {
+            color: variables.$dark-color;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 15px;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: variables.$main-color;
+            transition: all ease-in-out 0.3s;
+          }
+          &.active::after,&:hover::after{
+            width: 100%;
+          }
+        }
+      }
+      .login-singup a {
+        color: variables.$dark-color;
+        padding: 10px 20px;
+        background-color: variables.$main-color;
+        margin-left: 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

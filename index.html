@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+  <!-- style file -->
+  <link
+    rel="stylesheet"
+    href="css/main.css"
+  >
+  <!-- font-awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body>
+  <header>
+    <div class="container top-nav">
+      <a
+        href="#"
+        class="logo"
+      ><img
+          src="https://i.ibb.co/rvL1s5G/logo-black-min.webp"
+          alt="logo"
+          loading="lazy"
+        ></a>
+      <form class="search">
+        <input
+          type="search"
+          placeholder="Search"
+        >
+        <button type="submit">Search</button>
+      </form>
+      <div class="cart-head">
+        <div class="icon-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="count-item">0</span>
+        </div>
+        <div class="tottal-price">
+          <p class="">My Cart : </p>
+          <p class="">$0</p>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="links container">
+        <ul>
+          <li class="active"><a href="">home</a></li>
+          <li><a href="">all products</a></li>
+          <li><a href="">about us</a></li>
+          <li><a href="">contact</a></li>
+        </ul>
+        <div class="login-singup">
+          <a href="#">Log In <i class="fa-solid fa-right-to-bracket"></i></a>
+          <a href="#">Sing Up <i class="fa-solid fa-user-plus"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="cart">
+    <div class="top-cart">
+      <h3>My Cart <span>(0 Item in Cart)</span></h3>
+      <span><i class="fa-regular fa-rectangle-xmark .close-icon"></i></span>
+    </div>
+    <div class="items-in-cart"></div>
+    <div class="bottom-cart">
+      <div class="totle">
+        <p>Cart Subtotal</p>
+        <p class="price-cart-total">$0</p>
+      </div>
+      <div class="button-cart">
+        <a href="" class="btn-cart">procceed to check</a>
+        <button class="btn-cart trans-bg">Shop more</button>
+      </div>
+    </div>
+  </div>
+  <!-- javascript file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

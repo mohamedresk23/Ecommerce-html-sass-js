@@ -1,0 +1,68 @@
+@use '../helpers/variables';
+.cart {
+  width: 400px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 1100;
+  padding: 20px;
+  border-left: 1px solid variables.$border-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .top-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .close-icon {
+      font-size: 35px;
+      cursor: pointer;
+    }
+    h3 {
+      font-size: 18px;
+      span {
+        font-size: 14px;
+        color: variables.$parg-color;
+        font-weight: normal;
+      }
+    }
+  }
+  .items-in-cart {
+    padding: 20px 0;
+    border-block: 1px solid variables.$border-color;
+    margin-block: 20px;
+    height: 100%;
+  }
+  .bottom-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .totle {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      .price-cart-total {
+        color: variables.$main-color;
+      }
+    }
+    .button-cart {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .btn-cart {
+        border: 2px solid variables.$main-color;
+        border-radius: 5px;
+        color: variables.$dark-color;
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 20px 0;
+        background-color: variables.$main-color;
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+}
