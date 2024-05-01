@@ -1,4 +1,4 @@
-@use '../helpers/variables';
+ @use '../helpers/variables';
 .cart {
   width: 400px;
   position: fixed;
@@ -62,6 +62,15 @@
         background-color: variables.$main-color;
         transition: all ease-in-out 0.3s;
         cursor: pointer;
+        &:hover{
+          background-color: transparent;
+        }
+      }
+      .trans-bg{
+        background-color: transparent;
+        &:hover{
+          background-color: variables.$main-color;
+        }
       }
     }
   }
