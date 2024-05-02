@@ -3,7 +3,7 @@
   width: 400px;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -400px;
   bottom: 0;
   background-color: #fff;
   z-index: 1100;
@@ -12,6 +12,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all ease-in-out 0.5s;
+  &.active{
+    right: 0;
+  }
   .top-cart {
     display: flex;
     justify-content: space-between;
@@ -34,6 +38,36 @@
     border-block: 1px solid variables.$border-color;
     margin-block: 20px;
     height: 100%;
+    .item-cart{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 25px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      img{
+        width: 100px;
+      }
+      h4{
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .delete{
+        outline: none;
+        border: none;
+        i{
+          font-size: 22px;
+          transition: all ease-in-out 0.3s;
+          cursor: pointer;
+          &:hover{
+            color: darkred;
+            scale: 1.1;
+          }
+        }
+      }
+    }
   }
   .bottom-cart {
     display: flex;

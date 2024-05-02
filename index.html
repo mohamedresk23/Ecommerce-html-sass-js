@@ -21,6 +21,7 @@
 </head>
 
 <body>
+  <!--start header-->
   <header>
     <div class="container top-nav">
       <a
@@ -64,18 +65,21 @@
       </div>
     </nav>
   </header>
-  <div class="cart">
+  <!--end header-->
+  <!--start cart-->
+  <section class="cart">
     <div class="top-cart">
       <h3>My Cart <span>(0 Item in Cart)</span></h3>
-      <span><i class="fa-regular fa-rectangle-xmark .close-icon"></i></span>
+      <span class="close-icon"><i class="fa-regular fa-rectangle-xmark .close-icon"></i></span>
     </div>
     <div class="items-in-cart">
       <div class="item-cart">
         <img src="./img/product/product-1.jpg" alt="product">
         <div class="containt">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div class="price">10$</div>
+          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+          <div class="price">100$</div>
         </div>
+        <button class="delete"><i class="fa-regular fa-trash-can"></i></button>
       </div>
     </div>
     <div class="bottom-cart">
@@ -88,7 +92,27 @@
         <button class="btn-cart trans-bg">Shop more</button>
       </div>
     </div>
-  </div>
+  </section>
+  <!--end cart-->
+  <!--start sidebar-->
+  <section class="slider">
+    <div class="container">
+      <div class="side-bar">
+        <h2><i class="fa-solid fa-bars"></i> Shop by Debartment</h2>
+        <a href="#">All Categories</a>
+        <a href="#">Beast Saller Products</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Top 10 Offers</a>
+        <a href="#">Phone & Tablets</a>
+        <a href="#">Electrons & Digitals</a>
+        <a href="#">Fation & clothings</a>
+        <a href="#">Jewelry & Watches</a>
+        <a href="#">TV & Audio</a>
+      </div>
+    </div>
+  </section>
+
+  <!--end sidebar-->
   <!-- javascript file -->
   <script src="js/main.js"></script>
 </body>
