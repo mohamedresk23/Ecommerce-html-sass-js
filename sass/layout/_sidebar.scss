@@ -1,25 +1,53 @@
 @use '../helpers/variables';
 .slider{
-    .side-bar{
-        width: 300px;
-        background-color: white;
+    .container{
         display: flex;
-        flex-direction: column;
-        h2{
-            padding: 20px 15px;
+        justify-content: space-between;
+        .side-bar{
+            width: 300px;
+            background-color: white;
             display: flex;
-            align-items: center;
-            font-size: 18px;
-            gap: 14px;
+            flex-direction: column;
+            h2{
+                padding: 20px 15px;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                gap: 14px;
+            }
+            a{
+                font-size: 14px;
+                padding: 15px;
+                border-top: 1px solid variables.$border-color;
+                color: variables.$dark-color;
+                transition: all ease-in-out 0.3s;
+                &:hover{
+                    color: variables.$main-color;
+                }
+            }
         }
-        a{
-            font-size: 14px;
-            padding: 15px;
-            border-top: 1px solid variables.$border-color;
-            color: variables.$dark-color;
-            transition: all ease-in-out 0.3s;
-            &:hover{
-                color: variables.$main-color;
+        .slider-swp{
+            position: relative;
+            width: calc(100% - 350px);
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: left top;
+            }
+            .swiper-pagination{
+                .swiper-pagination-bullet{
+                background-color: #fff;
+                opacity: 1;
+                &.swiper-pagination-bullet-active{
+                    background-color: variables.$main-color !important;
+                    width: 35px !important;
+                    height: 8px !important;
+                    border-radius: 20px !important;
+                }
+                }
+                
             }
         }
     }

@@ -18,6 +18,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -109,10 +111,90 @@
         <a href="#">Jewelry & Watches</a>
         <a href="#">TV & Audio</a>
       </div>
+
+      <!-- Swiper -->
+    <div class="slider-swp mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#"><img src="./img/slider-01.jpg" alt="slider-01"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="./img/slider-02.jpg" alt="slider-03"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="./img/slider-03.jpg" alt="slider-02"></a>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
     </div>
   </section>
 
   <!--end sidebar-->
+
+  <!--start features-->
+  <section class="features">
+    <div class="container">
+      <div class="feature-item">
+        <img src="./img/features1.png" alt="features1">
+        <div class="text">
+          <h4>free shepping</h4>
+          <p>free shepping on all orders</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="./img/features2.png" alt="features2">
+        <div class="text">
+          <h4>free shepping</h4>
+          <p>free shepping on all orders</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="./img/features3.png" alt="features3">
+        <div class="text">
+          <h4>free shepping</h4>
+          <p>free shepping on all orders</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="./img/features4.png" alt="features4">
+        <div class="text">
+          <h4>free shepping</h4>
+          <p>free shepping on all orders</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <img src="./img/features5.png" alt="features5">
+        <div class="text">
+          <h4>free shepping</h4>
+          <p>free shepping on all orders</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end features-->
+
+    
+  
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullests:true,
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      });
+    </script>
   <!-- javascript file -->
   <script src="js/main.js"></script>
 </body>
