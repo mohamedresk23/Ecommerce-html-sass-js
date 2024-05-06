@@ -37,6 +37,7 @@ header {
   left: 0;
   right: 0;
   background-color: #fff;
+  z-index: 1000;
 }
 header .top-nav {
   padding: 20px 0;
@@ -314,4 +315,71 @@ header nav .links .login-singup a {
   width: 35px !important;
   height: 8px !important;
   border-radius: 20px !important;
+}
+
+.features {
+  margin: 50px 0;
+}
+.features .container {
+  display: flex;
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 5px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.features .container .feature-item {
+  width: 18%;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.features .container .feature-item img {
+  width: 50px;
+}
+.features .container .feature-item h4 {
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+.features .container .feature-item p {
+  font-size: 12px;
+}
+
+.banner {
+  margin: 50px 0;
+}
+.banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner .container .banner-img {
+  width: 32%;
+  position: relative;
+}
+.banner .container .banner-img img {
+  width: 100%;
+}
+.banner .container .banner-img .glasse-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.banner .container .banner-img .glasse-hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(50deg, transparent 50%, rgba(255, 255, 255, 0.1) 60%, rgba(255, 255, 255, 0.5) 70%, transparent 71%);
+  background-size: 200% 100%;
+  background-position: 200% 0;
+  transition: ease-in-out 0.7s;
+}
+.banner .container .banner-img .glasse-hover:hover::after {
+  background-position: 20% 0;
 }/*# sourceMappingURL=main.css.map */
