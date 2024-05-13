@@ -1,0 +1,27 @@
+@use '../helpers/variables';
+@use '../helpers/mixins';
+.slide{
+    margin-bottom:100px ;
+    .top-slide{
+        position: relative;
+        margin-bottom: 20px;
+        padding: 20px 0;
+        border-bottom: 1px solid variables.$border-color;
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100px;
+            height: 2px;
+            background-color: variables.$main-color;
+        }
+        h2{
+            text-transform: capitalize;
+            span{
+                font-weight: normal;
+            }
+        }
+    }
+}
+

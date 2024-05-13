@@ -1,0 +1,113 @@
+@use '../helpers/variables';
+@use '../helpers/mixins';
+.product{
+    position: absolute;
+    background-color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px #94949428;
+    border-bottom: 1px solid variables.$border-color;
+    border-radius: 5px;
+    width: 25%;
+    .sale-pers{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 14px;
+        color: #fff;
+        padding: 4px 12px;
+        z-index: 2;
+        background-color: variables.$dark-red;
+    }
+    .icons{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        right: -80px;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.5s ease-in-out;
+        i{
+            color:  variables.$dark-color;
+            background-color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid variables.$border-color;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            &:hover{
+                background-color: variables.$main-color;
+            }
+        }
+    }
+    .img-product{
+        position: relative;
+        img{
+            width: 100%;
+            transition: all ease-in-out 0.5s;
+        }
+        .img-hover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            scale: 0.1;
+        }
+    }
+    &:hover{
+        .img-product{
+            img{
+            opacity: 0;
+            scale: 0.1;
+            }
+            .img-hover{
+                opacity: 1;
+                scale: 1;
+            }
+        }
+        .icons{
+            right: 20px;
+        }
+    }
+    .containt{
+        .name-prduct{
+            font-size: 16px;
+            a{
+                color: variables.$name-item;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .stars{
+            margin: 15px 0;
+            i{
+                color: variables.$main-color;
+            }
+        }
+        .price{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            p{
+                &.new-price{
+                color: variables.$main-color;
+                font-weight: bold;
+                }
+                &.old-price{
+                    color: variables.$dark-red;
+                    text-decoration: line-through;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
