@@ -361,6 +361,24 @@ header nav .links .login-singup a {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
+.product .icons i.active {
+  background-color: #fcb700;
+  cursor: auto;
+  pointer-events: none;
+  position: relative;
+  overflow: hidden;
+}
+.product .icons i.active::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+}
 .product .icons i:hover {
   background-color: #fcb700;
 }

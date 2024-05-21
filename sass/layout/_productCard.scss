@@ -31,7 +31,7 @@
         transform: translateY(-50%);
         transition: all 0.5s ease-in-out;
         i{
-            color:  variables.$dark-color;
+            color: variables.$dark-color;
             background-color: #fff;
             width: 50px;
             height: 50px;
@@ -41,6 +41,24 @@
             text-align: center;
             cursor: pointer;
             transition: all 0.5s ease-in-out;
+            &.active{
+                background-color:variables.$main-color ;
+                cursor: auto;
+                pointer-events: none;
+                position: relative;
+                overflow: hidden;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    z-index: 5;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.2);
+                    transition: all 0.5s ease-in-out;
+                }
+            }
             &:hover{
                 background-color: variables.$main-color;
             }
