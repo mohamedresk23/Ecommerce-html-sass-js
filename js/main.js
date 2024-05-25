@@ -1,4 +1,4 @@
-// open & close car
+// open & close cart
 let cart_dev=document.querySelector(".cart");
 let icon_cart = document.querySelector(".icon-cart");
 let close_icon = document.querySelector(".close-icon");
@@ -12,6 +12,7 @@ icon_cart.addEventListener("click",openCart);
 close_icon.addEventListener("click",closeCar);
 
 
+// add products to cart
 let all_products_json;
 
 let items_in_cart = document.querySelector(".items-in-cart");
@@ -22,8 +23,12 @@ const addToCart = (id,btn) => {
     getCartItems();
     console.log(product_cart);
 }
-
+let countItemHead = document.querySelector(".count-item");
+    let tottlePriceHead = document.querySelector(".price-cart-head");
+    let countItemCart = document.querySelector(".count-item-cart");
+    let tottlePriceCart = document.querySelector(".price-cart-total");
 const getCartItems = () => {
+    let totlePrice =0;
     let items_cart ="";
     for (let i = 0; i < product_cart.length; i++) {
         items_cart += `
@@ -33,9 +38,34 @@ const getCartItems = () => {
           <h4>"${product_cart[i].name}</h4>
           <div class="price">"${product_cart[i].price}$</div>
         </div>
-        <button class="delete"><i class="fa-regular fa-trash-can"></i></button>
+        <button onclick="removeItemFromCart(${i})" class="delete"><i class="fa-regular fa-trash-can"></i></button>
       </div>`
         
+      totlePrice += product_cart[i].price;
     }
     items_in_cart.innerHTML = items_cart;
+    tottlePriceHead.innerHTML = `$${totlePrice}`;
+    countItemHead.innerHTML =  product_cart.length;
+    tottlePriceCart.innerHTML = `$${totlePrice}`;
+    countItemCart.innerHTML = `(${product_cart.length} Item in Cart)`;
+}
+
+
+
+// remove item from cart
+const removeItemFromCart = (index) => {
+    product_cart.splice(index, 1);
+    getCartItems();
+
+    let addToCartButtons = document.querySelectorAll('.add-to-cart');
+    console.log(addToCartButtons);
+    for (let i = 0; i < addToCartButtons.length; i++) {
+        addToCartButtons[i].classList.remove('active');
+
+        product_cart.forEach((product) => {
+            if (product.id == i) {
+                addToCartButtons[i].classList.add('active');
+            }
+        })
+    }
 }
