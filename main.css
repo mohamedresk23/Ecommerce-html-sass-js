@@ -506,6 +506,10 @@ header nav .links .login-singup a {
   background-position: 20% 0;
 }
 
+.banner_big.banner .banner-img {
+  width: 49%;
+}
+
 .slide {
   margin-bottom: 100px;
 }
@@ -550,4 +554,99 @@ header nav .links .login-singup a {
 }
 .slide .mySwiper .btn-swip.swiper-button-prev {
   left: calc(100% - 90px);
+}
+
+.slide-product .container {
+  position: relative;
+}
+.slide-product .product-swip {
+  width: calc(100% - 300px);
+}
+.slide-product .slide-with-img {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.slide-product .slide-with-img .categ-img {
+  padding: 10px 0;
+  width: 280px;
+}
+.slide-product .slide-with-img .categ-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.slide-product .slide-with-img .btn-swip {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #fcb700;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 18px;
+  border-radius: 5px;
+}
+.slide-product .slide-with-img .btn-swip::after {
+  font-size: 25px;
+}
+.slide-product .slide-with-img .btn-swip.swiper-button-prev {
+  left: calc(100% - 90px);
+}
+.slide-product .mySwiper {
+  overflow: hidden;
+  padding: 10px;
+}
+
+.newsletter {
+  background-color: #fff;
+}
+.newsletter .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+.newsletter .newsletter-text {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.newsletter .newsletter-text img {
+  width: 100px;
+}
+.newsletter .newsletter-text .content h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+.newsletter .newsletter-text .content p {
+  margin: 12px 0;
+}
+.newsletter .newsletter-form {
+  width: 40%;
+  border: 2px solid #fcb700;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.newsletter .newsletter-form input {
+  padding: 20px 175px 20px 20px;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+.newsletter .newsletter-form button {
+  background-color: #fcb700;
+  width: 170px;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  color: #222;
 }/*# sourceMappingURL=main.css.map */

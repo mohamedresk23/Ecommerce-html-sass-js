@@ -1,0 +1,56 @@
+@use '../helpers/variables';
+@use '../helpers/mixins';
+
+.newsletter{
+    background-color: #fff;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+    }
+    .newsletter-text{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 20px ;
+        img{
+            width: 100px;
+        }
+        .content{
+            h2{
+                font-size: 28px;
+                font-weight: 500;
+            }
+            p{
+                margin: 12px 0;
+            }
+        }
+    }
+    .newsletter-form{
+        width: 40%;
+        border: 2px solid variables.$main-color;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        input{
+            padding: 20px 175px 20px 20px;
+            outline: none;
+            border: none;
+            width: 100%;
+        }
+        button{
+            background-color: variables.$main-color;
+            width: 170px;
+            outline: none;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            cursor: pointer;
+            font-size: 18px;
+            color: #222;
+        }
+    }
+}

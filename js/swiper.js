@@ -1,5 +1,5 @@
 // swiper sidebar
-var swiper = new Swiper(".slider-swp", {
+let swiper_sidebar = new Swiper(".slider-swp", {
     pagination: {
       el: ".swiper-pagination",
       dynamicBullests:true,
@@ -13,12 +13,41 @@ var swiper = new Swiper(".slider-swp", {
   });
 
 // swiper sale
-var swiper = new Swiper(".sale-sec", {
+let swiper_sale = new Swiper(".sale-sec", {
     pagination: {
       el: ".swiper-pagination",
       dynamicBullests:true,
       clickable: true,
     },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    loop: true,
+  });
+
+// swiper product
+let swiper_product = new Swiper(".product-swip", {
     slidesPerView: 1,
     spaceBetween: 30,
     breakpoints: {
@@ -34,7 +63,6 @@ var swiper = new Swiper(".sale-sec", {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-
     },
     autoplay: {
       delay: 2500,
@@ -46,3 +74,4 @@ var swiper = new Swiper(".sale-sec", {
     },
     loop: true,
   });
+
