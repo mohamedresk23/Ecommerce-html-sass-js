@@ -69,3 +69,12 @@ const removeItemFromCart = (index) => {
         })
     }
 }
+
+// back To Top btn
+const backToTop = document.querySelector(".backToTop");
+backToTop.addEventListener("click",() => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})

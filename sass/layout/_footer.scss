@@ -1,0 +1,103 @@
+@use '../helpers/variables';
+@use '../helpers/mixins';
+.backToTop{
+    background-color: #4d5669;
+    p{
+        padding: 22px 0;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            color:variables.$main-color;;
+        }
+    }
+}
+
+footer{
+    background-color: #394150;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+        .big-row{
+            width: 30%;
+            .host-line{
+                display: flex;
+                align-items: center;
+                margin: 15px 0;
+                gap: 10px;
+                i{
+                    font-size: 60px;
+                    color:variables.$main-color
+                }
+                h5{
+                    color:#fff;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                h6{
+                    color:variables.$main-color;
+                    font-size: 18px;
+                }
+            }
+            p{
+                width: 90%;
+                color: #b1b1b1;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+        .row{
+            width: 22%;
+            h4{
+                color: #fff;
+                font-size: 18px;
+                margin-bottom: 18px;
+            }
+            .links{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                a{
+                    color: #b1b1b1;
+                    position: relative;
+                    left: 0;
+                    font-size: 18px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: variables.$main-color;
+                        left: 15px;
+                        transform: scale(1.06);
+                    }
+                }
+            }
+        }
+    }
+    .bottom-footer{
+        background-color: #202932;
+        .container{
+            padding: 20px 0;
+            align-items: center;
+            span{
+                color: variables.$main-color;
+            }
+            .payment-img{
+                display: flex;
+                gap: 10px;
+                img{
+                    filter: grayscale(100%);
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+        }
+
+    }
+}
