@@ -78,3 +78,17 @@ backToTop.addEventListener("click",() => {
         behavior: "smooth"
     })
 })
+
+
+// open & close menu Links
+let openIcone = document.querySelector(".open-icone");
+let closeIcone = document.querySelector(".close-icon");
+let ulLinks = document.querySelector(".links ul");
+
+openIcone.addEventListener("click",() => {
+    ulLinks.classList.add("open");
+});
+closeIcone.addEventListener("click",() => {
+    ulLinks.classList.remove("open");
+    
+});

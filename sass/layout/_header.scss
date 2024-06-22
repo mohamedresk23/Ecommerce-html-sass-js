@@ -85,7 +85,7 @@ header {
           line-height: 20px;
           color: variables.$dark-color;
           border: 1px solid variables.$border-color;
-          background-color: variables.$main-color
+          background-color: variables.$main-color;
         }
       }
       .tottal-price p {
@@ -99,9 +99,53 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .open-icone{
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        @include mixins.large{
+          display: block;
+        }
+      }
       ul {
         display: flex;
         gap: 70px;
+        .close-icon{
+          display: none;
+          @include mixins.large{
+            display: block;
+          }
+        }
+        @include mixins.large{
+          position: fixed;
+          top: 0;
+          left: -100%;
+          bottom: 0;
+          background-color: #fff;
+          flex-direction: column;
+          gap: 30px;
+          width: 40%;
+          text-align: center;
+          transition: all 0.5s ease-in-out; 
+          &.open{
+            left: 0;
+          }
+        }
+        @include mixins.Medium{
+          width: 50%;
+        }
+        @include mixins.small{
+          width: 80%;
+        }
+        .close-icon{
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 10;
+          cursor: pointer;
+          font-size: 30px;
+          color: variables.$main-color;
+          }
         li {
           position: relative;
           padding: 20px 0;
@@ -126,12 +170,17 @@ header {
           }
         }
       }
-      .login-singup a {
-        color: variables.$dark-color;
-        padding: 10px 20px;
-        background-color: variables.$main-color;
-        margin-left: 10px;
-        border-radius: 5px;
+      .login-singup 
+      {
+        margin-block: 1rem;
+          a {
+          color: variables.$dark-color;
+          padding: 10px 20px;
+          background-color: variables.$main-color;
+          margin-left: 10px;
+          border-radius: 5px;
+          margin-block: 1rem;
+        }
       }
     }
   }

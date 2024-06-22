@@ -140,9 +140,63 @@ header nav .links {
   justify-content: space-between;
   align-items: center;
 }
+header nav .links .open-icone {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  header nav .links .open-icone {
+    display: block;
+  }
+}
 header nav .links ul {
   display: flex;
   gap: 70px;
+}
+header nav .links ul .close-icon {
+  display: none;
+}
+@media (max-width: 992px) {
+  header nav .links ul .close-icon {
+    display: block;
+  }
+}
+@media (max-width: 992px) {
+  header nav .links ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 30px;
+    width: 40%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+  header nav .links ul.open {
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  header nav .links ul {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  header nav .links ul {
+    width: 80%;
+  }
+}
+header nav .links ul .close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fcb700;
 }
 header nav .links ul li {
   position: relative;
@@ -167,12 +221,16 @@ header nav .links ul li::after {
 header nav .links ul li.active::after, header nav .links ul li:hover::after {
   width: 100%;
 }
+header nav .links .login-singup {
+  margin-block: 1rem;
+}
 header nav .links .login-singup a {
   color: #222;
   padding: 10px 20px;
   background-color: #fcb700;
   margin-left: 10px;
   border-radius: 5px;
+  margin-block: 1rem;
 }
 
 .cart {
