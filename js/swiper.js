@@ -51,16 +51,16 @@ let swiper_product = new Swiper(".product-swip", {
     slidesPerView: 1,
     spaceBetween: 30,
     breakpoints: {
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 40,
+        1200: {
+          slidesPerView:3,
+          spaceBetween: 10,
         },
-        768: {
-          slidesPerView: 3,
+        992: {
+          slidesPerView: 2,
           spaceBetween: 30,
         },
         640: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 20,
         },
     },

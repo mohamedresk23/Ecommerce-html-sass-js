@@ -6,6 +6,9 @@
     }
     .product-swip{
         width: calc(100% - 300px);
+        @include mixins.large {
+            width: 100%;
+        }
 
     }
     .slide-with-img{
@@ -20,6 +23,9 @@
                 height: 100%;
                 object-fit: cover;
                 border-radius: 5px;
+            }
+            @include mixins.large {
+                display: none;
             }
         }
         .btn-swip{

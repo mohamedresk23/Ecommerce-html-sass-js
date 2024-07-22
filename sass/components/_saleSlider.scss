@@ -18,6 +18,9 @@
         }
         h2{
             text-transform: capitalize;
+            @include mixins.Medium {
+                font-size: 18px;
+            }
             span{
                 font-weight: normal;
             }

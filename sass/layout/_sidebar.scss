@@ -1,4 +1,5 @@
 @use '../helpers/variables';
+@use '../helpers/mixins';
 .slider{
     .container{
         display: flex;
@@ -25,6 +26,9 @@
                     color: variables.$main-color;
                 }
             }
+            @include mixins.breackpoint(1000px) {
+                display: none; 
+            }
         }
         .slider-swp{
             position: relative;
@@ -40,14 +44,17 @@
                 .swiper-pagination-bullet{
                 background-color: #fff;
                 opacity: 1;
-                &.swiper-pagination-bullet-active{
-                    background-color: variables.$main-color !important;
-                    width: 35px !important;
-                    height: 8px !important;
-                    border-radius: 20px !important;
-                }
+                    &.swiper-pagination-bullet-active{
+                        background-color: variables.$main-color !important;
+                        width: 35px !important;
+                        height: 8px !important;
+                        border-radius: 20px !important;
+                    }
                 }
                 
+            }
+            @include mixins.breackpoint(1000px) {
+                width: 100%;
             }
         }
     }

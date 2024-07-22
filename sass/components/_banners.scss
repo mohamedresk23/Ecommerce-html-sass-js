@@ -6,9 +6,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include mixins.breackpoint(1000px) {
+            flex-direction: column;
+        }
         .banner-img{
             width: 32%;
             position: relative;
+            @include mixins.breackpoint(1000px) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
             img{
                 width: 100%;
             }
@@ -44,5 +51,8 @@
 .banner_big.banner{
     .banner-img{
         width: 49%;
+        @include mixins.breackpoint(1000px) {
+           width: 100%;
+        }
     }
 }

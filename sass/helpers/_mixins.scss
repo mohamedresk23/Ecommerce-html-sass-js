@@ -23,6 +23,11 @@
     @content;
   }
 }
+@mixin breackpoint($point) {
+  @media (max-width:$point) {
+    @content;
+  }
+}
 
 // @function getColor($color) {
 //   @return map-get($map: $colors, $key: $color )

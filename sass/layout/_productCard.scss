@@ -30,7 +30,7 @@
         top: 50%;
         transform: translateY(-50%);
         transition: all 0.5s ease-in-out;
-        i{
+        span,i{
             color: variables.$dark-color;
             background-color: #fff;
             width: 50px;

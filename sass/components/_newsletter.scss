@@ -8,6 +8,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 40px 0;
+        @include mixins.breackpoint(1000px) {
+            flex-direction: column;
+        }
     }
     .newsletter-text{
         width: 50%;
@@ -21,11 +24,19 @@
             h2{
                 font-size: 28px;
                 font-weight: 500;
+                @include mixins.small {
+                    font-size: 20px;
+                }
             }
             p{
                 margin: 12px 0;
             }
         }
+        @include mixins.breackpoint(1000px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
     }
     .newsletter-form{
         width: 40%;
@@ -38,6 +49,9 @@
             outline: none;
             border: none;
             width: 100%;
+            @include mixins.small {
+                padding-right: 75px;
+            }
         }
         button{
             background-color: variables.$main-color;
@@ -51,6 +65,12 @@
             cursor: pointer;
             font-size: 18px;
             color: #222;
+            @include mixins.small {
+                width: 100px;
+            }
+        }
+        @include mixins.breackpoint(1000px) {
+            width: 100%;
         }
     }
 }

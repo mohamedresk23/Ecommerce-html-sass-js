@@ -1,29 +1,33 @@
 @use '../helpers/variables';
 @use '../helpers/mixins';
-.features{
+.features {
     margin: 50px 0;
-    .container{
+    
+    .container {
         display: flex;
         background-color: #fff;
-        padding:25px 20px;
+        padding: 25px 20px;
         border-radius: 5px;
         justify-content: space-between;
         flex-wrap: wrap;
-        .feature-item{
+        .feature-item {
             width: 18%;
             min-width: 220px;
             display: flex;
             align-items: center;
             gap: 20px;
-            img{
+            img {
                 width: 50px;
             }
-            h4{
+            h4 {
                 margin-bottom: 18px;
                 font-size: 15px;
             }
-            p{
+            p {
                 font-size: 12px;
+            }
+            @include mixins.breackpoint(1000px) {
+                margin-bottom: 20px;
             }
         }
     }

@@ -1,7 +1,7 @@
 // open & close cart
 let cart_dev=document.querySelector(".cart");
 let icon_cart = document.querySelector(".icon-cart");
-let close_icon = document.querySelector(".close-icon");
+let close_icon = document.querySelector(".top-cart .close-icon");
 const openCart = () => {
     cart_dev.classList.add("active")
 }

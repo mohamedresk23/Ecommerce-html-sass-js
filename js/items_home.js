@@ -12,7 +12,9 @@ fetch("js/items.json")
         <div class="product swiper-slide">
         <span class="sale-pers">${Math.floor(((product.old_price - product.price)/ product.old_price)*100)}%</span>
         <div class="icons">
-          <i class="fa-solid fa-cart-plus add-to-cart"  onclick="addToCart(${product.id},this)" ></i>
+          <span class="add-to-cart"  onclick="addToCart(${product.id},this)">
+            <i class="fa-solid fa-cart-plus "  ></i>
+          </span>
           <i class="fa-solid fa-heart"></i>
           <i class="fa-solid fa-share"></i>
         </div>

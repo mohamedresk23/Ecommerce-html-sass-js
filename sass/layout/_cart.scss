@@ -1,9 +1,10 @@
- @use '../helpers/variables';
+@use '../helpers/variables';
+@use '../helpers/mixins';
 .cart {
   width: 400px;
   position: fixed;
   top: 0;
-  right: -400px;
+  right: -100%;
   bottom: 0;
   background-color: #fff;
   z-index: 1100;
@@ -13,8 +14,12 @@
   flex-direction: column;
   justify-content: space-between;
   transition: all ease-in-out 0.5s;
-  &.active{
+  @include mixins.breackpoint(500px) {
+    width: 100%; 
+  }
+  &.active {
     right: 0;
+
   }
   .top-cart {
     display: flex;
@@ -38,30 +43,30 @@
     border-block: 1px solid variables.$border-color;
     margin-block: 20px;
     height: 100%;
-    .item-cart{
+    .item-cart {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;
       margin-bottom: 25px;
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
       }
-      img{
+      img {
         width: 100px;
       }
-      h4{
+      h4 {
         font-weight: 500;
         margin-bottom: 10px;
       }
-      .delete{
+      .delete {
         outline: none;
         border: none;
-        i{
+        i {
           font-size: 22px;
           transition: all ease-in-out 0.3s;
           cursor: pointer;
-          &:hover{
+          &:hover {
             color: darkred;
             scale: 1.1;
           }
@@ -96,13 +101,13 @@
         background-color: variables.$main-color;
         transition: all ease-in-out 0.3s;
         cursor: pointer;
-        &:hover{
+        &:hover {
           background-color: transparent;
         }
       }
-      .trans-bg{
+      .trans-bg {
         background-color: transparent;
-        &:hover{
+        &:hover {
           background-color: variables.$main-color;
         }
       }

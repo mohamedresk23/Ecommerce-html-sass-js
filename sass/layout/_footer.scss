@@ -23,8 +23,17 @@ footer{
         display: flex;
         justify-content: space-between;
         padding: 40px 0;
+        flex-wrap: wrap;
         .big-row{
             width: 30%;
+            @include mixins.breackpoint(1000px) {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+            @include mixins.Medium {
+                width: 80%;
+                margin-bottom: 40px;
+            }
             .host-line{
                 display: flex;
                 align-items: center;
@@ -53,6 +62,14 @@ footer{
         }
         .row{
             width: 22%;
+            @include mixins.breackpoint(1000px) {
+                width: 40%;
+                margin-bottom: 20px;
+            }
+            @include mixins.Medium {
+                width: 80%;
+                margin-bottom: 40px;
+            }
             h4{
                 color: #fff;
                 font-size: 18px;
@@ -95,6 +112,9 @@ footer{
                     &:hover{
                         filter: grayscale(0%);
                     }
+                }
+                @include mixins.Medium {
+                    margin-top: 20px;
                 }
             }
         }

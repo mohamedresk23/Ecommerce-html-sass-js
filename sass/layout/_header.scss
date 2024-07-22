@@ -180,6 +180,9 @@ header {
           margin-left: 10px;
           border-radius: 5px;
           margin-block: 1rem;
+          @include mixins.small {
+            padding: 5px 10px;
+        }
         }
       }
     }
