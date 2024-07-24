@@ -1,0 +1,108 @@
+@use '../helpers/variables';
+@use '../helpers/mixins';
+
+.item_details {
+  background-color: #fff;
+  padding: 50px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .img_item {
+      width: 40%;
+      .big_img {
+        img {
+          width: 100%;
+        }
+      }
+      .sm_imgs {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        img {
+          width: 24%;
+        }
+      }
+    }
+    .details_item {
+      width: 58%;
+      h1 {
+        margin-bottom: 30px;
+      }
+      h5 {
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 20px;
+        span {
+          color: variables.$main-color;
+        }
+      }
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin: 20px 0;
+        gap: 20px;
+        p {
+          font-size: 24px;
+          &.new-price {
+            color: variables.$main-color;
+            font-weight: bold;
+          }
+          &.old-price {
+            color: variables.$dark-red;
+            text-decoration: line-through;
+            font-size: 18px;
+          }
+        }
+      }
+      .stars {
+        i {
+          color: variables.$main-color;
+        }
+      }
+      .desc {
+        line-height: 2;
+      }
+      h4 {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      button {
+        border: none;
+        outline: none;
+        background-color: variables.$main-color;
+        color: variables.$dark-color;
+        font-weight: bold;
+        padding: 14px 35px;
+        border-radius: 5px;
+        margin: 30px 0;
+        font-size: 18px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      .icons {
+        display: flex;
+        gap: 10px;
+        i {
+          width: 50px;
+          height: 50px;
+          background-color: #efeeee;
+          text-align: center;
+          line-height: 50px;
+          border-radius: 50%;
+          border: 1px solid variables.$border-color;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: variables.$main-color;
+          }
+        }
+      }
+    }
+  }
+}

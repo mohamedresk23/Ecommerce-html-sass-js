@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Document</title>
+  <!-- style file -->
+  <!-- <link
+    rel="stylesheet"
+    href="main.css"
+  > -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- font-awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!--start header-->
+  <header>
+    <div class="container top-nav">
+      <a
+        href="#"
+        class="logo"
+      ><img
+          src="./img/logo-black.png"
+          alt="logo"
+          loading="lazy"
+        ></a>
+      <form class="search">
+        <input
+          type="search"
+          placeholder="Search"
+        >
+        <button type="submit">Search</button>
+      </form>
+      <div class="cart-head">
+        <div class="icon-cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="count-item">0</span>
+        </div>
+        <div class="tottal-price">
+          <p class="">My Cart : </p>
+          <p class="price-cart-head">$0</p>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="links container">
+        <i class="fa-solid fa-bars open-icone"></i>
+        <ul>
+          <i class="fa-regular fa-circle-xmark close-icon"></i>
+          <li class="active"><a href="">home</a></li>
+          <li><a href="">all products</a></li>
+          <li><a href="">about us</a></li>
+          <li><a href="">contact</a></li>
+        </ul>
+        <div class="login-singup">
+          <a href="#">Log In <i class="fa-solid fa-right-to-bracket"></i></a>
+          <a href="#">Sing Up <i class="fa-solid fa-user-plus"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--end header-->
+  <!--start cart-->
+  <section class="cart">
+    <div class="top-cart">
+      <h3>My Cart <span class="count-item-cart">(0 Item in Cart)</span></h3>
+      <span class="close-icon"><i class="fa-regular fa-rectangle-xmark .close-icon"></i></span>
+    </div>
+    <div class="items-in-cart">
+      
+    </div>
+    <div class="bottom-cart">
+      <div class="totle">
+        <p>Cart Subtotal</p>
+        <p class="price-cart-total">$0</p>
+      </div>
+      <div class="button-cart">
+        <a href="" class="btn-cart">procceed to check</a>
+        <button class="btn-cart trans-bg">Shop more</button>
+      </div>
+    </div>
+  </section>
+  <!--end cart-->
+
+  <!-- start item details -->
+    <div class="item_details">
+      <div class="container">
+        <div class="img_item">
+          <div class="big_img">
+            <img src="./img/product/product-1.jpg" alt="">
+          </div>
+          <div class="sm_imgs">
+            <img src="./img/product/product-1.jpg" alt="product-1">
+            <img src="./img/product/product-2.jpg" alt="product-2">
+            <img src="./img/product/product1.jpg" alt="">
+            <img src="./img/product/product2.jpg" alt="">
+          </div>
+        </div>
+        <div class="details_item">
+          <h1  class="name">Original Mobile Androide</h1>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="price">
+            <p class="new-price"><span>$120</span></p>
+            <p class="old-price">$170</p>
+          </div>
+          <h5>Avaailability: <span>In Stock</span></h5>
+          <h5>SKU: <span>Samsung c49J89:875,Debenhams Plus</span></h5>
+          <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, nisi dolores ab aut illum cupiditate numquam molestiae? Possimus excepturi odio aspernatur tenetur. Corrupti nihil minus non aperiam voluptas, dolore quam. Perspiciatis in et consequatur culpa doloremque est perferendis dolores molestiae praesentium nisi, nemo illum. At illum blanditiis libero voluptas distinctio?</p>
+          <h4>Hurry Up! Only 98 products left in stoke</h4>
+          <button>add to cart <i class="fa-solid fa-cart-arrow-down"></i> </button>
+          <div class="icons">
+            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-solid fa-sliders"></i></span>
+            <span><i class="fa-solid fa-print"></i></span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end item details -->
+
+  <!-- start sale slider -->
+  <section class="slide slide-sale">
+    <div class="container">
+      <div class="sale-sec mySwiper">
+        <div class="top-slide">
+          <h2>On sale <span>product</span></h2>
+        </div>
+        <div id="swiper-products-sale" class="products swiper-wrapper">
+          
+        </div>
+        <div class="swiper-button-next btn-swip"></div>
+        <div class="swiper-button-prev btn-swip"></div>
+      </div>
+    </div>
+  </section>
+  <!-- end sale slider -->
+
+  <!--start footer-->
+  <!-- start go to top btn-->
+  <div class="backToTop">
+    <p>Back To Top</p>
+  </div>
+  <!-- end go to top btn-->
+  <footer>
+    <div class="container">
+      <div class="big-row">
+        <img src="./img/logo-white.png" alt="logo-white">
+        <div class="host-line">
+          <i class="fa-solid fa-headset"></i>
+          <div class="text">
+            <h5>Hostline Free 24/24</h5>
+            <h6>(+100) 123 456 7890</h6>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, sunt.</p>
+      </div>
+      <div class="row">
+        <h4>FAQs & Help</h4>
+        <div class="links">
+          <a href="#">F.A.Q'.S</a>
+          <a href="#">Ordaring Traking</a>
+          <a href="#">Contacts</a>
+          <a href="#">Events</a>
+          <a href="#">Help center</a>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Shipping & Delivery</h4>
+        <div class="links">
+          <a href="#">Delavery Information</a>
+          <a href="#">Discount</a>
+          <a href="#">Payment & Shipping</a>
+          <a href="#">Estimated Delivery Time </a>
+          <a href="#">Shipping Guide</a>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Information</h4>
+        <div class="links">
+          <a href="#">Popular</a>
+          <a href="#">Our Services</a>
+          <a href="#">Your Acount</a>
+          <a href="#">Privacy Polcy</a>
+          <a href="#">Terms & Condetions</a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <div class="container">
+        <p> Copyright &copy; <span>Topico.</span> all rights reseved</p>
+        <div class="payment-img">
+          <img src="./img/payment-1.png" alt="payment-1">
+          <img src="./img/payment-2.png" alt="payment-1">
+          <img src="./img/payment-3.png" alt="payment-1">
+          <img src="./img/payment-4.png" alt="payment-1">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--end footer-->
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- javascript file -->
+  <script src="js/items_home.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/swiper.js"></script>
+</body>
+
+</html>
