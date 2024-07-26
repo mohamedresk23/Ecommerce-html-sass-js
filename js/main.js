@@ -92,3 +92,11 @@ closeIcone.addEventListener("click",() => {
     ulLinks.classList.remove("open");
     
 });
+
+
+// item page
+// change item image function
+let bigImage = document.querySelector(".img_item .big_img img");
+const changeImg = (img) => { 
+    bigImage.src = img;
+}

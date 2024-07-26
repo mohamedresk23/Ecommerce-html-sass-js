@@ -1,0 +1,42 @@
+@use '../helpers/variables';
+@use '../helpers/mixins';
+
+.top_page {
+  text-align: center;
+  padding: 50px 0;
+  h1 {
+    font-size: 40px;
+    color: variables.$main-color;
+    margin-bottom: 25px;
+  }
+  p {
+    font-size: 18px;
+    width: 60%;
+    margin: auto;
+    color: variables.$parg-color;
+  }
+}
+
+.all_products {
+  .container {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: start;
+    // .filter {
+    //   background-color: #fff;
+    //   width: 280px;
+    //   height: 300px;
+    // }
+    .products_div {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5%;
+      .product{
+        position: relative;
+        width: 22%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

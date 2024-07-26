@@ -22,11 +22,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
-  <!-- Link Swiper's CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
 </head>
 
 <body>
@@ -102,90 +97,20 @@
   </section>
   <!--end cart-->
 
-  <!-- start item details -->
-  <div class="item_details">
+  <div class="top_page">
     <div class="container">
-      <div class="img_item">
-        <div class="big_img">
-          <img
-            src="./img/product/product-1.jpg"
-            alt=""
-          >
-        </div>
-        <div class="sm_imgs">
-          <img
-          onclick="changeImg(this.src)"
-            src="./img/product/product-1.jpg"
-            alt="product-1"
-          >
-          <img
-          onclick="changeImg(this.src)"
-            src="./img/product/product-2.jpg"
-            alt="product-2"
-          >
-          <img
-          onclick="changeImg(this.src)"
-            src="./img/product/product1.jpg"
-            alt=""
-          >
-          <img
-          onclick="changeImg(this.src)"
-            src="./img/product/product2.jpg"
-            alt=""
-          >
-        </div>
-      </div>
-      <div class="details_item">
-        <h1 class="name">Original Mobile Androide</h1>
-        <div class="stars">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <div class="price">
-          <p class="new-price"><span>$120</span></p>
-          <p class="old-price">$170</p>
-        </div>
-        <h5>Avaailability: <span>In Stock</span></h5>
-        <h5>SKU: <span>Samsung c49J89:875,Debenhams Plus</span></h5>
-        <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, nisi dolores ab aut illum
-          cupiditate numquam molestiae? Possimus excepturi odio aspernatur tenetur. Corrupti nihil minus non aperiam
-          voluptas, dolore quam. Perspiciatis in et consequatur culpa doloremque est perferendis dolores molestiae
-          praesentium nisi, nemo illum. At illum blanditiis libero voluptas distinctio?</p>
-        <h4>Hurry Up! Only 98 products left in stoke</h4>
-        <button>add to cart <i class="fa-solid fa-cart-arrow-down"></i> </button>
-        <div class="icons">
-          <span><i class="fa-regular fa-heart"></i></span>
-          <span><i class="fa-solid fa-sliders"></i></span>
-          <span><i class="fa-solid fa-print"></i></span>
-          <span><i class="fa-solid fa-share-nodes"></i></span>
-        </div>
+      <h1>Experiemce the future of Technology with Our Topic</h1>
+      <p>Find everything you need to transform your home into a smart , connectted space. Our Topico Store Offers a wide range of devices to fit your needs</p>
+    </div>
+  </div>
+  <div class="all_products">
+    <div class="container">
+      <div class="filter"></div>
+      <div id="products_div" class="products_div">
+
       </div>
     </div>
   </div>
-  <!-- end item details -->
-
-  <!-- start sale slider -->
-  <section class="slide slide-sale">
-    <div class="container">
-      <div class="sale-sec mySwiper">
-        <div class="top-slide">
-          <h2>On sale <span>product</span></h2>
-        </div>
-        <div
-          id="swiper-products-sale"
-          class="products swiper-wrapper"
-        >
-
-        </div>
-        <div class="swiper-button-next btn-swip"></div>
-        <div class="swiper-button-prev btn-swip"></div>
-      </div>
-    </div>
-  </section>
-  <!-- end sale slider -->
 
   <!--start footer-->
   <!-- start go to top btn-->
@@ -266,12 +191,9 @@
   </footer>
   <!--end footer-->
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- javascript file -->
-  <script src="js/items_home.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/swiper.js"></script>
+  <script src="js/all_products.js"></script>
 </body>
 
 </html>

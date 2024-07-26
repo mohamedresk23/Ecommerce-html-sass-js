@@ -8,8 +8,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mixins.large{
+      flex-direction: column;
+      gap: 40px;
+    }
     .img_item {
       width: 40%;
+      @include mixins.large{
+        width: 70%;
+      }
+      @include mixins.small{
+        width: 95%;
+      }
       .big_img {
         img {
           width: 100%;
@@ -26,13 +36,22 @@
     }
     .details_item {
       width: 58%;
+      @include mixins.large{
+        width: 90%;
+      }
       h1 {
         margin-bottom: 30px;
+        @include mixins.small{
+          font-size: 20px;
+        }
       }
       h5 {
         font-weight: 500;
         font-size: 16px;
         margin-bottom: 20px;
+        @include mixins.small{
+          font-size: 14px;
+        }
         span {
           color: variables.$main-color;
         }
@@ -63,10 +82,16 @@
       }
       .desc {
         line-height: 2;
+        @include mixins.small{
+          font-size: 14px;
+        }
       }
       h4 {
         font-size: 20px;
         margin-top: 20px;
+        @include mixins.small{
+          font-size: 16px;
+        }
       }
       button {
         border: none;
@@ -83,6 +108,9 @@
         transition: all 0.3s ease-in-out;
         &:hover {
           transform: scale(1.05);
+        }
+        @include mixins.small{
+          font-size: 14px;
         }
       }
       .icons {
