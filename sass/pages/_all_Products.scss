@@ -8,12 +8,19 @@
     font-size: 40px;
     color: variables.$main-color;
     margin-bottom: 25px;
+    @include mixins.Medium{
+      font-size: 24px;
+    }
   }
   p {
     font-size: 18px;
     width: 60%;
     margin: auto;
     color: variables.$parg-color;
+    @include mixins.Medium{
+      font-size: 16px;
+      width: 80%;
+    }
   }
 }
 
@@ -36,6 +43,17 @@
         position: relative;
         width: 22%;
         margin-bottom: 30px;
+        @include mixins.large{
+          width: 30%;
+        }
+        @include mixins.Medium{
+          width: 45%;
+          
+        }
+        @include mixins.small{
+          width: 80%;
+          margin-inline: auto;
+        }
       }
     }
   }

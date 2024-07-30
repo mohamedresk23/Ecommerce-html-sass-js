@@ -1104,11 +1104,22 @@ footer .bottom-footer .container .payment-img img:hover {
   color: #fcb700;
   margin-bottom: 25px;
 }
+@media (max-width: 768px) {
+  .top_page h1 {
+    font-size: 24px;
+  }
+}
 .top_page p {
   font-size: 18px;
   width: 60%;
   margin: auto;
   color: #666;
+}
+@media (max-width: 768px) {
+  .top_page p {
+    font-size: 16px;
+    width: 80%;
+  }
 }
 
 .all_products .container .products_div {
@@ -1121,4 +1132,162 @@ footer .bottom-footer .container .payment-img img:hover {
   position: relative;
   width: 22%;
   margin-bottom: 30px;
+}
+@media (max-width: 992px) {
+  .all_products .container .products_div .product {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .all_products .container .products_div .product {
+    width: 45%;
+  }
+}
+@media (max-width: 576px) {
+  .all_products .container .products_div .product {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
+.checkout {
+  margin: 60px 0;
+}
+.checkout .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .checkout .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.checkout .container form, .checkout .container .orderSummary {
+  width: 45%;
+}
+@media (max-width: 992px) {
+  .checkout .container form, .checkout .container .orderSummary {
+    width: 70%;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .checkout .container form, .checkout .container .orderSummary {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .checkout .container form, .checkout .container .orderSummary {
+    width: 97%;
+  }
+}
+.checkout .container form h2 {
+  background-color: #fcb700;
+  padding: 10px 20px;
+  text-transform: capitalize;
+}
+.checkout .container form .address, .checkout .container form .copune {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.checkout .container form .address .inputs, .checkout .container form .copune .inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+}
+.checkout .container form .address .inputs label, .checkout .container form .copune .inputs label {
+  color: #222;
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.checkout .container form .address .inputs input, .checkout .container form .copune .inputs input {
+  margin: 5px 0 20px;
+  padding: 8px 10px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid rgba(102, 102, 102, 0.1647058824);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.checkout .container form .address .inputs input:focus, .checkout .container form .copune .inputs input:focus {
+  border-color: #fcb700;
+}
+.checkout .container .orderSummary {
+  background-color: #fff;
+  padding: 0 20px;
+}
+.checkout .container .orderSummary h1 {
+  border-bottom: 1px solid rgba(102, 102, 102, 0.1647058824);
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.checkout .container .orderSummary .items .item_cart {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.checkout .container .orderSummary .items .item_cart img {
+  width: 150px;
+}
+.checkout .container .orderSummary .items .item_cart h4 {
+  color: #666;
+  margin-bottom: 20px;
+}
+@media (max-width: 576px) {
+  .checkout .container .orderSummary .items .item_cart h4 {
+    font-size: 14px;
+  }
+}
+.checkout .container .orderSummary .items .item_cart p {
+  color: #222;
+  font-size: 18px;
+}
+@media (max-width: 576px) {
+  .checkout .container .orderSummary .items .item_cart p {
+    font-size: 16px;
+  }
+}
+.checkout .container .orderSummary .items .totle {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkout .container .orderSummary .items .totle p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #222;
+  text-transform: capitalize;
+}
+.checkout .container .orderSummary .items .totle span {
+  font-size: 25px;
+  font-weight: bold;
+  color: #222;
+}
+.checkout .container .orderSummary .items .button_div {
+  border-top: 1px solid rgba(102, 102, 102, 0.1647058824);
+  padding: 30px 0;
+}
+.checkout .container .orderSummary .items .button_div button {
+  width: 100%;
+  background-color: #fcb700;
+  border: 2px solid #fcb700;
+  color: #222;
+  padding: 15px 0;
+  outline: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.checkout .container .orderSummary .items .button_div button:hover {
+  background-color: transparent;
+  color: #fcb700;
 }/*# sourceMappingURL=main.css.map */
