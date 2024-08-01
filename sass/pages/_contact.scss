@@ -1,0 +1,202 @@
+@use '../helpers/variables';
+@use '../helpers/mixins';
+// Contact Hero Section
+
+.contact-hero {
+  background-color: variables.$main-color;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+
+  .hero-content {
+      max-width: 600px;
+      margin: 0 auto;
+
+      h1 {
+          font-size: 3rem;
+          margin-bottom: 10px;
+      }
+
+      p {
+          font-size: 1.2rem;
+      }
+  }
+}
+
+// Contact Info Section
+.contact-info {
+  background-color: #fff;
+  padding: 50px 0;
+
+  .container {
+      width: variables.$container-width;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .info {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 30px;
+
+          .info-item {
+              text-align: center;
+              width: 265px;
+              padding: 20px;
+              border-radius: variables.$border-radius;
+              background-color: variables.$background-color;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+              i {
+                  font-size: 2rem;
+                  color: variables.$border-color;
+                  margin-bottom: 10px;
+              }
+
+              h3 {
+                  font-size: 1.5rem;
+                  margin-bottom: 5px;
+                  color: variables.$main-color;
+              }
+
+              p {
+                  font-size: 1rem;
+
+                  a {
+                      color: variables.$parg-color;
+                      text-decoration: none;
+                      transition: color 0.3s ease;
+
+                      &:hover {
+                          color: variables.$main-color;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
+
+// Contact Form Section
+.contact-form {
+  background-color: variables.$background-color;
+  padding: 50px 0;
+
+  .container {
+      width: variables.$container-width;
+      margin: 0 auto;
+
+      h2 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          text-align: center;
+          color: variables.$main-color; 
+      }
+
+      form {
+          max-width: 600px;
+          margin: 0 auto;
+          background-color: #fff;
+          padding: 30px;
+          border-radius: variables.$border-radius;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+          .form-group {
+              margin-bottom: 20px;
+
+              label {
+                  display: block;
+                  font-size: 1rem;
+                  margin-bottom: 5px;
+                  color: variables.$parg-color;
+              }
+
+              input,
+              textarea {
+                  width: 100%;
+                  padding: 10px;
+                  font-size: 1rem;
+                  border: 1px solid #ccc;
+                  border-radius: variables.$border-radius;
+                  outline: none;
+                  transition: border-color 0.3s ease;
+
+                  &:focus {
+                      border-color: variables.$main-color;
+                  }
+              }
+
+              textarea {
+                  resize: vertical;
+              }
+          }
+
+          .btn {
+              display: inline-block;
+              background-color: variables.$main-color;
+              color: #fff;
+              padding: 10px 20px;
+              font-size: 1rem;
+              border: none;
+              border-radius: variables.$border-radius;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+
+              &:hover {
+                  background-color: darken(variables.$main-color, 10%); 
+              }
+          }
+      }
+  }
+}
+
+// Social Media Section
+.social-media {
+  background-color: #fff;
+  padding: 50px 0;
+
+  .container {
+      width:variables.$container-width;
+      margin: 0 auto;
+      text-align: center;
+
+      h2 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          color: variables.$main-color;
+      }
+
+      .social-links {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+
+          li {
+              a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: variables.$main-color;
+                  color: #fff;
+                  padding: 10px 20px;
+                  font-size: 1.2rem;
+                  border-radius: variables.$border-radius;
+                  text-decoration: none;
+                  transition: background-color 0.3s ease;
+
+                  i {
+                      margin-right: 8px;
+                      font-size: 1.5rem;
+                  }
+
+                  &:hover {
+                      background-color: darken(variables.$main-color, 10%);
+                  }
+              }
+          }
+      }
+  }
+}
