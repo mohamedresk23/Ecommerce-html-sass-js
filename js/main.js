@@ -11,6 +11,19 @@ const closeCar= () => {
 icon_cart.addEventListener("click",openCart);
 close_icon.addEventListener("click",closeCar);
 
+// open & close menu Links
+let openIcone = document.querySelector(".open-icone");
+let closeIcone = document.querySelector(".close-icon");
+let ulLinks = document.querySelector(".links ul");
+
+openIcone.addEventListener("click",() => {
+    ulLinks.classList.add("open");
+});
+closeIcone.addEventListener("click",() => {
+    ulLinks.classList.remove("open");
+    
+});
+
 
 // add products to cart
 let all_products_json;
@@ -78,20 +91,6 @@ backToTop.addEventListener("click",() => {
         behavior: "smooth"
     })
 })
-
-
-// open & close menu Links
-let openIcone = document.querySelector(".open-icone");
-let closeIcone = document.querySelector(".close-icon");
-let ulLinks = document.querySelector(".links ul");
-
-openIcone.addEventListener("click",() => {
-    ulLinks.classList.add("open");
-});
-closeIcone.addEventListener("click",() => {
-    ulLinks.classList.remove("open");
-    
-});
 
 
 // item page
