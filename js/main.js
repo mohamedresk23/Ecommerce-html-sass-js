@@ -100,3 +100,26 @@ let bigImage = document.querySelector(".img_item .big_img img");
 const changeImg = (img) => { 
     bigImage.src = img;
 }
+
+// change active link in header
+let links = document.querySelectorAll(".links ul li");
+links.forEach((link,i) => {
+    link.addEventListener("click", () => {
+        links.forEach(item => {
+            item.classList.remove("active");
+        });
+        link.classList.add("active");
+        localStorage.setItem("activeLink", i);  // store index of active link in local storage
+    });
+});
+
+//variable in lockal storage to store index of active link
+window.onload = () => {
+    links.forEach(item => {
+        item.classList.remove("active");
+    });
+    let activeLink = localStorage.getItem("activeLink");
+    if (activeLink) {
+        links[activeLink].classList.add("active");
+    }
+}

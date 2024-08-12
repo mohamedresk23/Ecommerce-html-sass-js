@@ -1413,6 +1413,12 @@ section .container p {
   justify-content: space-around;
   margin-top: 30px;
 }
+@media (max-width: 768px) {
+  .team .team-members {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .team .team-members .member {
   text-align: center;
   background-color: #fff;
@@ -1587,6 +1593,11 @@ section .container p {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .social-media .container .social-links {
+    flex-direction: column;
+  }
 }
 .social-media .container .social-links li a {
   display: flex;

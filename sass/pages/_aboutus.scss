@@ -58,6 +58,10 @@ section {
       display: flex;
       justify-content: space-around;
       margin-top: 30px;
+      @include mixins.Medium{
+        flex-direction: column;
+        gap: 30px;
+      }
 
       .member {
           text-align: center;

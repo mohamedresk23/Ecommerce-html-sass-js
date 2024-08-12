@@ -173,6 +173,9 @@
           display: flex;
           justify-content: center;
           gap: 20px;
+          @include mixins.Medium{
+            flex-direction: column;
+          }
 
           li {
               a {

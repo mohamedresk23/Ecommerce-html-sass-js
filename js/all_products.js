@@ -25,7 +25,7 @@ fetch("js/items.json")
         </div>
         <div class="containt">
           <h3 class="name-prduct">
-            <a href="#">
+            <a href="../item.html ">
             ${product.name}
             </a> </h3>
           <div class="stars">
